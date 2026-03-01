@@ -5,7 +5,9 @@ using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Metrics;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment02_OOP
@@ -93,15 +95,39 @@ namespace Assignment02_OOP
     //return a safe default value if the index is out of range.
 
     //c) Can a class have more than one indexer?
-      //Yes
-       //public string this[int index] { get; set; }
-       //public string this[string name] { get; set; }
+    //Yes
+    //public string this[int index] { get; set; }
+    //public string this[string name] { get; set; }
 
     //This is useful in:
-      //Dictionaries
-      //Data collections
-   
+    //Dictionaries
+    //Data collections
+
     #endregion Q03
+
+    #region Q04
+    //A)What does the `static` keyword mean on `TotalOrders`? 
+       //Belongs to class
+      // Shared among all objects
+     //Single value
+
+    // How is it different from the `Item` field?
+      // Belongs to object
+     //Unique for each object
+    // Each object has its own value
+
+    //B) Can a static method inside `Order` access the `Item` field directly?
+     //No
+
+    //Why or why not?
+      //Item is a non-static field(belongs to objects).
+     //A static method belongs to the class, not to a specific object.
+    //Static methods cannot directly access non-static members.
+
+
+    #endregion
+
+
     internal class Program
     {
         static void Main(string[] args)
