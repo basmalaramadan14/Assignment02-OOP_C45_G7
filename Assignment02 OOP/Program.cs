@@ -1,9 +1,11 @@
 ﻿
 
 
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Metrics;
+using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment02_OOP
@@ -53,7 +55,7 @@ namespace Assignment02_OOP
     //Yes properties can contain logic inside the get and set accessors.
 
 
-          //Validate
+    //Validate
     //public int Age
     //{
     //    get { return age; }
@@ -64,14 +66,42 @@ namespace Assignment02_OOP
     //    }
     //}
 
-           //Calculate values
+    //Calculate values
     //public double SalaryAfterIncrease
     //{
     //    get {  return Salary + (Salary * 0.10); }
     //}
     #endregion
 
+    #region Q03
 
+    //A)It is called an Indexer.
+    //It allows objects of a class to be accessed like an array.
+    //It provides a way to access elements using an index.
+
+    //Example:
+    //register[0] = "Basmala";
+
+    //B)What happens if someone writes `register[10] = "Ali";` ?
+    //The array names has size 5 (indexes 0 to 4).
+    //Index 10 is out of range.
+    //This will cause an IndexOutOfRangeException (runtime error).
+
+    //How would you make the indexer safer?
+
+    //To make the indexer safer, we validate the index before accessing data
+    //return a safe default value if the index is out of range.
+
+    //c) Can a class have more than one indexer?
+      //Yes
+       //public string this[int index] { get; set; }
+       //public string this[string name] { get; set; }
+
+    //This is useful in:
+      //Dictionaries
+      //Data collections
+   
+    #endregion Q03
     internal class Program
     {
         static void Main(string[] args)
